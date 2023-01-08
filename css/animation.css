@@ -1,0 +1,67 @@
+.main-link {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+
+    background-color: aqua;
+    color: brown;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 8px;
+    cursor: pointer;
+
+    transition: background-color, color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+   
+}
+
+.btn::before {
+    display: inline-block;
+content: "";
+
+
+width: 20px;
+height: 20px;
+margin-right: 4px;
+
+background-image: url(../image/people.svg);
+background-size: contain;
+
+transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover::before {
+    transform: translateY(-50px);
+}
+
+.btn:hover::after {
+    transform: translateY(0);
+}
+
+.btn::after {
+    display: inline-block;
+content: "";
+
+
+width: 20px;
+height: 20px;
+margin-left: 4px;
+
+background-image: url(../image/blue-fly.svg);
+background-size: contain;
+
+transform: translateY(50px);
+
+transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: blue;
+    color:beige;
+}
+
